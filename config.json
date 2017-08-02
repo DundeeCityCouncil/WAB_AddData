@@ -1,0 +1,35 @@
+{
+    "numPerPage": 30,
+    "scopeOptions": {
+        "MyContent": {
+            "allow": true,
+            "label": null
+        },
+        "MyOrganization": {
+            "allow": true,
+            "label": null
+        },
+        "Curated": {
+            "allow": true,
+            "label": null,
+            "filter": null
+        },
+        "ArcGISOnline": {
+            "allow": true,
+            "label": null
+        }
+    },
+    "addFromUrl": {
+        "allow": true
+    },
+    "addFromFile": {
+        "allow": true,
+        "maxRecordCount": 1000
+    },
+    "addFromGIS": {
+        "allow": true
+    },
+    "q": "group:\"574abc27ed8a475faeba54d9a0bfd9ed\" type:\"Web Map\"",
+    "num": 100,
+    "portal": "https://mapsonline.dundeecity.gov.uk/portal/"
+}
