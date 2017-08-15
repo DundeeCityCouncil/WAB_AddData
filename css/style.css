@@ -1768,6 +1768,13 @@
     
 }
 
+.jimu-widget-addmapdata .added{
+    
+    
+    color:green;
+    
+}
+
 #mapItems {
     overflow-y: scroll;
     max-height: 78%;

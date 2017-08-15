@@ -60,7 +60,7 @@ define(['dojo/_base/declare',
                         {
                             var layerTitle = groups.results[result].title;
                             var MapID = groups.results[result].id;
-                            data.mapItems.innerHTML += "<li data-portal-item='" + MapID + "'>" + layerTitle + "</li>";
+                            data.mapItems.innerHTML += "<li data-portal-item='" + MapID + "'>" + layerTitle + "<span class='added' ></span></li>";
                             arcgisUtils.getItem(MapID).then(function (eachLayer) {
                                 opTitle = eachLayer.item.title;
                                 OpLayers[opTitle] = eachLayer;
@@ -79,6 +79,10 @@ define(['dojo/_base/declare',
                    
                     var ID = $(event.target).data('portal-item');
                     var tempMapObj = arcgisUtils.createMap(ID, "map2");
+                      textPlaceHolder=$(event.target).context.innerHTML;
+                      console.log($(event.target));
+                      $(event.target).context.firstElementChild.innerHTML = "&#10004; Added";
+
                     tempMapObj.then(function (response) {
                         var tempMap = response.map;
                         for (var j = 0; j < tempMap.graphicsLayerIds.length; j++)
